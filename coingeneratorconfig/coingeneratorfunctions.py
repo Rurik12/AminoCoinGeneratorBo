@@ -11,27 +11,27 @@ def deviceIdgenerator(st : int = 69):
 	thedevice = '01' + (MetaSpecial := sha1(ran.encode("utf-8"))).hexdigest() + sha1(bytes.fromhex('01') + MetaSpecial.digest() + base64.b64decode("6a8tf0Meh6T4x7b0XvwEt+Xw6k8=")).hexdigest()
 	return thedevice
 
-def login(client : amino.Client, email : str, password : str):
+def login(client : amino.Client, Kawaiaone123@gmail.com : str, password : str):
 	try:
-		client.login(email=email, password=password)
-		print(f"Logged in {email}\n")
+		client.login(Kawaiaone123@gmail.com =Kawaiaone123@gmail.com , password=password)
+		print(f"Logged in {Kawaiaone123@gmail.com }\n")
 	except amino.lib.util.exceptions.YouAreBanned:
-		print(f"{email} This Account Banned")
+		print(f"{Kawaiaone123@gmail.com } This Account Banned")
 		return
 	except amino.lib.util.exceptions.VerificationRequired as e:
-		print(f"Verification required for {email}")
+		print(f"Verification required for {Kawaiaone123@gmail.com }")
 		link = e.args[0]['url']
 		print(link)
 		input("Waiting for Verification >> ")
-		login(client, email, password)
+		login(client, Kawaiaone123@gmail.com , password)
 	except amino.lib.util.exceptions.InvalidPassword:
-		print(f"Incorrect password for {email}")
+		print(f"Incorrect password for {Kawaiaone123@gmail.com }")
 		passx = input("Enter correct password >> ")
-		login(client, email, passx)
+		login(client, Kawaiaone123@gmail.com , passx)
 	except amino.lib.util.exceptions.InvalidAccountOrPassword:
-		print(f"Incorrect password for {email}")
+		print(f"Incorrect password for {Kawaiaone123@gmail.com }")
 		passx = input("Enter correct password >> ")
-		login(client, email, passx)
+		login(client, Kawaiaone123@gmail.com , passx)
 	except:
 		return
         
